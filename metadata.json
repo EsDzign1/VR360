@@ -1,0 +1,8 @@
+{
+  "name": "VR360°",
+  "description": "An authentic 360° panoramic generation, Sketch mode, Remix workflow, style library, cubemap export, and immersive 3D viewer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

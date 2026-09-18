@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Filter to produce subtle graphite/charcoal pencil texture -->
+    <filter id="charcoalTexture" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="4" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+      <feBlend in="SourceGraphic" in2="displaced" mode="multiply" />
+    </filter>
+    <clipPath id="circleClip">
+      <circle cx="200" cy="200" r="190" />
+    </clipPath>
+  </defs>
+
+  <!-- Circular Base Badge -->
+  <circle cx="200" cy="200" r="190" fill="#ffffff" stroke="#262626" stroke-width="2" />
+
+  <!-- Charcoal Hand-Drawn Scribble Cluster -->
+  <g clip-path="url(#circleClip)">
+    <!-- Base organic scribble silhouette -->
+    <path d="M 130,130 
+             C 105,160 100,195 105,225 
+             C 112,255 135,275 165,285 
+             C 195,295 235,290 265,275 
+             C 295,255 305,220 300,185 
+             C 295,150 275,120 240,105 
+             C 205,95 160,105 130,130 Z" 
+          fill="#232323" 
+          filter="url(#charcoalTexture)" />
+
+    <!-- Pencil texture hatch strokes radiating and crossing -->
+    <g stroke="#262626" stroke-width="4.5" stroke-linecap="round" opacity="0.95">
+      <!-- Diagonal hatching pass 1 -->
+      <line x1="120" y1="210" x2="210" y2="120" />
+      <line x1="110" y1="235" x2="235" y2="110" />
+      <line x1="115" y1="260" x2="260" y2="115" />
+      <line x1="130" y1="275" x2="275" y2="130" />
+      <line x1="150" y1="288" x2="288" y2="150" />
+      <line x1="175" y1="295" x2="295" y2="175" />
+      <line x1="205" y1="292" x2="292" y2="205" />
+      
+      <!-- Cross hatching pass 2 -->
+      <line x1="110" y1="180" x2="250" y2="280" />
+      <line x1="125" y1="150" x2="270" y2="265" />
+      <line x1="145" y1="130" x2="285" y2="245" />
+      <line x1="170" y1="115" x2="295" y2="220" />
+      <line x1="195" y1="110" x2="300" y2="195" />
+      <line x1="220" y1="110" x2="295" y2="170" />
+
+      <!-- Jagged pencil edge frays around the perimeter -->
+      <path d="M 125,140 L 98,165 L 132,158 L 94,185 L 128,182 L 95,210 L 130,208 L 102,235 L 138,232 L 115,258 L 152,254 L 135,278 L 175,272 L 160,292 L 195,286 L 190,302 L 225,290 L 235,302 L 258,284 L 275,292 L 285,268 L 306,265 L 296,242 L 314,230 L 298,208 L 315,190 L 294,175 L 308,155 L 282,145 L 292,125 L 265,122 L 268,102 L 242,108 L 235,92 L 210,102 L 195,88 L 178,104 L 158,95 L 148,114 L 128,112 Z" fill="#262626" />
+    </g>
+
+    <!-- Inner dense shading to give the solid charcoal appearance -->
+    <ellipse cx="202" cy="198" rx="88" ry="86" fill="#242424" filter="url(#charcoalTexture)" />
+
+    <!-- "ES" Monogram in pure white -->
+    <text x="175" y="222" 
+          font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" 
+          font-size="112" 
+          font-weight="300" 
+          letter-spacing="2" 
+          fill="#ffffff" 
+          text-anchor="middle">E</text>
+    <text x="235" y="222" 
+          font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" 
+          font-size="112" 
+          font-weight="300" 
+          letter-spacing="2" 
+          fill="#ffffff" 
+          text-anchor="middle">S</text>
+  </g>
+
+  <!-- Subtitles beneath the circle -->
+  <text x="200" y="322" 
+        font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" 
+        font-size="17" 
+        font-weight="400" 
+        letter-spacing="0.8" 
+        fill="#333333" 
+        text-anchor="middle">interior &#8226; architecture &#8226; design</text>
+  
+  <text x="200" y="348" 
+        font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" 
+        font-size="22" 
+        font-weight="700" 
+        letter-spacing="0.5" 
+        fill="#111111" 
+        text-anchor="middle">ES.Dzign.research</text>
+</svg>
