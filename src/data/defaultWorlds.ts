@@ -1,6 +1,9 @@
 import { SkyboxWorld } from '../types';
 import { generateProceduralSkybox } from '../utils/proceduralSkybox';
 
+const baseUrl = import.meta.env.BASE_URL || './';
+const showroomUrl = `${baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`}showroom-360.jpg`;
+
 export const INITIAL_WORLDS_CONFIG: (Omit<SkyboxWorld, 'textureUrl' | 'thumbnailUrl'> & {
   textureUrl?: string;
   thumbnailUrl?: string;
@@ -26,8 +29,8 @@ export const INITIAL_WORLDS_CONFIG: (Omit<SkyboxWorld, 'textureUrl' | 'thumbnail
     ambiance: 'cavern',
     tags: ['showroom', 'architecture', 'interior', 'es-design', 'archways'],
     elements: ['Curved Archways', 'Star Floor Inlay', 'Blue LED Curves', 'Display Cases'],
-    textureUrl: '/showroom-360.jpg',
-    thumbnailUrl: '/showroom-360.jpg',
+    textureUrl: showroomUrl,
+    thumbnailUrl: showroomUrl,
   },
   {
     id: 'world-neo-tokyo',
